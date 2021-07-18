@@ -108,7 +108,6 @@ config.p2p = {};
 config.p2p.enabled = true;
 config.p2p.host = '[host]';
 config.p2p.port = [port];
-config.p2p.disableTransactions = true;
 
 // Settings Configuration
 config.settings = {};
