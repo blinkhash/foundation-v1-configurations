@@ -6,7 +6,7 @@ config.enabled = true;
 config.featured = true;
 config.address = '[address]';
 config.debug = false;
-config.identifier = 'https://github.com/blinkhash/blinkhash-server';
+config.identifier = 'https://github.com/blinkhash/foundation-server';
 config.logo = '[logo]';
 
 // Coin Configuration

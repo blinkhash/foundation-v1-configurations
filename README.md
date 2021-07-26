@@ -1,9 +1,9 @@
-# Blinkhash Configurations
+# Foundation Configurations
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Discord](https://img.shields.io/discord/738590795384356904)](https://discord.gg/8xtHZFKJQY)
 
-This repository is a collection of coin configuration files confirmed to be working with Blinkhash's mining platform. To request for a configuration file to be added to the repository, open an issue or pull request and it will be addressed
+This repository is a collection of coin configuration files confirmed to be working with Foundation's mining pools. To request for a configuration file to be added to the repository, open an issue or pull request and it will be addressed
 
 #### Need Support?
 
