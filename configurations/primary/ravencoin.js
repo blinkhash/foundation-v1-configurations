@@ -1,6 +1,6 @@
 /*
  *
- * Example (Litecoin)
+ * Example (Ravencoin)
  *
  */
 
@@ -13,7 +13,7 @@ config.enabled = true;
 
 // Statistics Configuration
 config.name = '[name]';
-config.coins = ['Litecoin'];
+config.coins = ['Ravencoin'];
 config.logo = '';
 
 // Banning Configuration
@@ -62,45 +62,45 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Litecoin';
-config.primary.coin.symbol = 'LTC';
+config.primary.coin.name = 'Ravencoin';
+config.primary.coin.symbol = 'RVN';
 config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
 config.primary.coin.parameters = {};
-config.primary.coin.segwit = true;
+config.primary.coin.segwit = false;
 config.primary.coin.staking = false;
 config.primary.coin.rewards = '';
 config.primary.coin.version = 1;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
-config.primary.coin.algorithms.mining = 'scrypt';
+config.primary.coin.algorithms.mining = 'kawpow';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
-config.primary.coin.mainnet.bech32 = 'ltc';
+config.primary.coin.mainnet.bech32 = '';
 config.primary.coin.mainnet.bip32 = {};
 config.primary.coin.mainnet.bip32.public = Buffer.from('0488B21E', 'hex').readUInt32LE(0);
 config.primary.coin.mainnet.bip32.private = Buffer.from('0488ADE4', 'hex').readUInt32LE(0);
-config.primary.coin.mainnet.peerMagic = 'fbc0b6db';
-config.primary.coin.mainnet.pubKeyHash = Buffer.from('30', 'hex').readUInt8(0);
-config.primary.coin.mainnet.scriptHash = Buffer.from('32', 'hex').readUInt8(0);
-config.primary.coin.mainnet.wif = Buffer.from('b0', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'ltc';
+config.primary.coin.mainnet.peerMagic = '5241564e';
+config.primary.coin.mainnet.pubKeyHash = Buffer.from('3c', 'hex').readUInt8(0);
+config.primary.coin.mainnet.scriptHash = Buffer.from('7a', 'hex').readUInt8(0);
+config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
+config.primary.coin.mainnet.coin = 'rvn';
 
-// Mainnet Configuration
+// Testnet Configuration
 config.primary.coin.testnet = {};
-config.primary.coin.testnet.bech32 = 'tltc';
+config.primary.coin.testnet.bech32 = '';
 config.primary.coin.testnet.bip32 = {};
 config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
 config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
-config.primary.coin.testnet.peerMagic = 'fcc1b7dc';
+config.primary.coin.testnet.peerMagic = '52564e54';
 config.primary.coin.testnet.pubKeyHash = Buffer.from('6F', 'hex').readUInt8(0);
-config.primary.coin.testnet.scriptHash = Buffer.from('3A', 'hex').readUInt8(0);
+config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
 config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
-config.primary.coin.testnet.coin = 'ltc';
+config.primary.coin.testnet.coin = 'trvn';
 
 // Daemon Configuration
 config.primary.daemons = [];

@@ -1,6 +1,6 @@
 /*
  *
- * Example (Litecoin)
+ * Example (Litecoin/Dogecoin)
  *
  */
 
@@ -13,7 +13,7 @@ config.enabled = true;
 
 // Statistics Configuration
 config.name = '[name]';
-config.coins = ['Litecoin'];
+config.coins = ['Litecoin', 'Dogecoin'];
 config.logo = '';
 
 // Banning Configuration
@@ -66,10 +66,11 @@ config.primary.coin.name = 'Litecoin';
 config.primary.coin.symbol = 'LTC';
 config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
-config.primary.coin.messages = false;
+config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
 config.primary.coin.staking = false;
 config.primary.coin.rewards = '';
+config.primary.coin.version = 1;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};

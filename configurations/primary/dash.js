@@ -65,11 +65,12 @@ config.primary.coin = {};
 config.primary.coin.name = 'Dash';
 config.primary.coin.symbol = 'DASH';
 config.primary.coin.asicboost = false;
-config.primary.coin.getInfo = false;
-config.primary.coin.messages = false;
+config.primary.coin.getinfo = false;
+config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
 config.primary.coin.staking = false;
 config.primary.coin.rewards = '';
+config.primary.coin.version = 3;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
