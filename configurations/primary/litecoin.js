@@ -15,6 +15,7 @@
 const config = {};
 config.enabled = true;
 config.name = 'Pool-Litecoin';
+config.coins = ['Litecoin'];
 
 // Banning Configuration
 config.banning = {};

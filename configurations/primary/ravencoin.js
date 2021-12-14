@@ -15,6 +15,7 @@
 const config = {};
 config.enabled = true;
 config.name = 'Pool-Ravencoin';
+config.coins = ['Ravencoin'];
 
 // Banning Configuration
 config.banning = {};

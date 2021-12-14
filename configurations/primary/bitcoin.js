@@ -15,6 +15,7 @@
 const config = {};
 config.enabled = true;
 config.name = 'Pool-Bitcoin';
+config.coins = ['Bitcoin'];
 
 // Banning Configuration
 config.banning = {};

@@ -15,6 +15,7 @@
 const config = {};
 config.enabled = true;
 config.name = 'Pool-Dash';
+config.coins = ['Dash'];
 
 // Banning Configuration
 config.banning = {};

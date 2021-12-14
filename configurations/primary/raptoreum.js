@@ -15,6 +15,7 @@
 const config = {};
 config.enabled = false;
 config.name = 'Pool-Raptoreum';
+config.coins = ['Raptoreum'];
 
 // Banning Configuration
 config.banning = {};
@@ -101,7 +102,7 @@ config.primary.coin.testnet.bech32 = '';
 config.primary.coin.testnet.bip32 = {};
 config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
 config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
-config.primary.coin.testnet.peerMagic = 'cee2caff';
+config.primary.coin.testnet.peerMagic = '7472746d';
 config.primary.coin.testnet.pubKeyHash = Buffer.from('7B', 'hex').readUInt8(0);
 config.primary.coin.testnet.scriptHash = Buffer.from('13', 'hex').readUInt8(0);
 config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
