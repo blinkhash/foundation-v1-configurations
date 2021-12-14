@@ -10,11 +10,7 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-
-// Statistics Configuration
-config.name = '[name]';
-config.coins = ['Litecoin', 'Dogecoin'];
-config.logo = '';
+config.name = 'Pool-LitecoinDogecoin';
 
 // Banning Configuration
 config.banning = {};
@@ -43,11 +39,12 @@ config.ports.push(ports1);
 config.p2p = {};
 config.p2p.enabled = false;
 config.p2p.host = '[host]';
-config.p2p.port = [port];
+config.p2p.port = 9333;
 
 // Settings Configuration
 config.settings = {};
 config.settings.blockRefreshInterval = 1000;
+config.settings.statisticsRefreshInterval = 20000;
 config.settings.connectionTimeout = 600;
 config.settings.hashrateWindow = 300;
 config.settings.jobRebroadcastTimeout = 60;
@@ -78,6 +75,11 @@ config.primary.coin.algorithms.mining = 'scrypt';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
+// Rewards Configuration
+config.primary.coin.rewards = {};
+config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.addresses = [];
+
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
 config.primary.coin.mainnet.bech32 = 'ltc';
@@ -107,7 +109,7 @@ config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = [port];
+daemons1.port = 9332;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -122,7 +124,7 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.0004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = [port];
+config.primary.payments.daemon.port = 9332;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 
@@ -131,7 +133,7 @@ config.primary.recipients = [];
 
 const recipient1 = {};
 recipient1.address = '[address]';
-recipient1.percentage = [percentage];
+recipient1.percentage = [percentage] // 0 to 1;
 config.primary.recipients.push(recipient1);
 
 // Auxiliary Configuration
@@ -152,7 +154,7 @@ config.auxiliary.daemons = [];
 
 const auxDaemons1 = {};
 auxDaemons1.host = '[host]';
-auxDaemons1.port = [port];
+auxDaemons1.port = 22555;
 auxDaemons1.username = '[username]';
 auxDaemons1.password = '[password]';
 config.auxiliary.daemons.push(auxDaemons1);
@@ -167,7 +169,7 @@ config.auxiliary.payments.minPayment = 100;
 config.auxiliary.payments.transactionFee = 3;
 config.auxiliary.payments.daemon = {};
 config.auxiliary.payments.daemon.host = '[host]';
-config.auxiliary.payments.daemon.port = [port];
+config.auxiliary.payments.daemon.port = 22555;
 config.auxiliary.payments.daemon.username = '[username]';
 config.auxiliary.payments.daemon.password = '[password]';
 

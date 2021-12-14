@@ -1,10 +1,10 @@
 /*
  *
- * Example (Bitcoin)
+ * Example (Pools)
  *
  */
 
-// Bitcoin Configuration File
+// Raptoreum Configuration File
 // https://blinkhash.com/docs/foundation/configurations
 // Consult the above link if you have any questions
 
@@ -13,8 +13,8 @@
 
 // Miscellaneous Configuration
 const config = {};
-config.enabled = true;
-config.name = 'Pool-Bitcoin';
+config.enabled = false;
+config.name = 'Pool-Raptoreum';
 
 // Banning Configuration
 config.banning = {};
@@ -41,9 +41,9 @@ config.ports.push(ports1);
 
 // P2P Configuration
 config.p2p = {};
-config.p2p.enabled = true;
+config.p2p.enabled = false;
 config.p2p.host = '[host]';
-config.p2p.port = 8333;
+config.p2p.port = 9999;
 
 // Settings Configuration
 config.settings = {};
@@ -63,57 +63,56 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Bitcoin';
-config.primary.coin.symbol = 'BTC';
-config.primary.coin.asicboost = false;
-config.primary.coin.getinfo = false;
+config.primary.coin.name = 'Raptoreum';
+config.primary.coin.symbol = 'RTM';
+config.primary.coin.asicBoost = false;
+config.primary.coin.getInfo = true;
 config.primary.coin.parameters = {};
-config.primary.coin.segwit = true;
+config.primary.coin.segwit = false;
 config.primary.coin.staking = false;
-config.primary.coin.rewards = '';
-config.primary.coin.version = 4;
+config.primary.coin.version = 3;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
-config.primary.coin.algorithms.mining = 'sha256d';
+config.primary.coin.algorithms.mining = 'ghostrider';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Rewards Configuration
 config.primary.coin.rewards = {};
-config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.type = 'founders1';
 config.primary.coin.rewards.addresses = [];
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
-config.primary.coin.mainnet.bech32 = 'bc';
+config.primary.coin.mainnet.bech32 = '';
 config.primary.coin.mainnet.bip32 = {};
 config.primary.coin.mainnet.bip32.public = Buffer.from('0488B21E', 'hex').readUInt32LE(0);
 config.primary.coin.mainnet.bip32.private = Buffer.from('0488ADE4', 'hex').readUInt32LE(0);
-config.primary.coin.mainnet.peerMagic = 'f9beb4d9';
-config.primary.coin.mainnet.pubKeyHash = Buffer.from('00', 'hex').readUInt8(0);
-config.primary.coin.mainnet.scriptHash = Buffer.from('05', 'hex').readUInt8(0);
-config.primary.coin.mainnet.wif = Buffer.from('128', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'btc';
+config.primary.coin.mainnet.peerMagic = '72746d2e';
+config.primary.coin.mainnet.pubKeyHash = Buffer.from('3C', 'hex').readUInt8(0);
+config.primary.coin.mainnet.scriptHash = Buffer.from('10', 'hex').readUInt8(0);
+config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
+config.primary.coin.mainnet.coin = 'rtm';
 
-// Mainnet Configuration
+// Testnet Configuration
 config.primary.coin.testnet = {};
-config.primary.coin.testnet.bech32 = 'tb';
+config.primary.coin.testnet.bech32 = '';
 config.primary.coin.testnet.bip32 = {};
 config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
 config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
-config.primary.coin.testnet.peerMagic = '0b110907';
-config.primary.coin.testnet.pubKeyHash = Buffer.from('6F', 'hex').readUInt8(0);
-config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
-config.primary.coin.testnet.wif = Buffer.from('239', 'hex').readUInt8(0);
-config.primary.coin.testnet.coin = 'btc';
+config.primary.coin.testnet.peerMagic = 'cee2caff';
+config.primary.coin.testnet.pubKeyHash = Buffer.from('7B', 'hex').readUInt8(0);
+config.primary.coin.testnet.scriptHash = Buffer.from('13', 'hex').readUInt8(0);
+config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
+config.primary.coin.testnet.coin = 'rtm';
 
 // Daemon Configuration
 config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = 8332;
+daemons1.port = 9998;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -128,7 +127,7 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.0004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = 8332;
+config.primary.payments.daemon.port = 9998;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 

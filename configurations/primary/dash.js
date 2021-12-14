@@ -4,17 +4,17 @@
  *
  */
 
+// Dash Configuration File
+// https://blinkhash.com/docs/foundation/configurations
+// Consult the above link if you have any questions
+
 // Main Configuration
 ////////////////////////////////////////////////////////////////////////////////
 
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-
-// Statistics Configuration
-config.name = '[name]';
-config.coins = ['Dash'];
-config.logo = '';
+config.name = 'Pool-Dash';
 
 // Banning Configuration
 config.banning = {};
@@ -43,11 +43,12 @@ config.ports.push(ports1);
 config.p2p = {};
 config.p2p.enabled = true;
 config.p2p.host = '[host]';
-config.p2p.port = [port];
+config.p2p.port = 9999;
 
 // Settings Configuration
 config.settings = {};
 config.settings.blockRefreshInterval = 1000;
+config.settings.statisticsRefreshInterval = 20000;
 config.settings.connectionTimeout = 600;
 config.settings.hashrateWindow = 300;
 config.settings.jobRebroadcastTimeout = 60;
@@ -78,6 +79,11 @@ config.primary.coin.algorithms.mining = 'x11';
 config.primary.coin.algorithms.block = 'x11';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
+// Rewards Configuration
+config.primary.coin.rewards = {};
+config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.addresses = [];
+
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
 config.primary.coin.mainnet.bech32 = '';
@@ -107,7 +113,7 @@ config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = [port];
+daemons1.port = 9998;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -122,7 +128,7 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.0004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = [port];
+config.primary.payments.daemon.port = 9998;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 
@@ -131,7 +137,7 @@ config.primary.recipients = [];
 
 const recipient1 = {};
 recipient1.address = '[address]';
-recipient1.percentage = [percentage];
+recipient1.percentage = [percentage] // 0 to 1;
 config.primary.recipients.push(recipient1);
 
 // Export Configuration
