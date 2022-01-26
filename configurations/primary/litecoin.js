@@ -31,6 +31,10 @@ const ports1 = {};
 ports1.port = [port];
 ports1.enabled = true;
 ports1.type = [type];
+ports1.ssl = {};
+ports1.ssl.enabled = false;
+ports1.ssl.key = '';
+ports1.ssl.cert = '';
 ports1.difficulty = {};
 ports1.difficulty.initial = [initial];
 ports1.difficulty.minimum = [minimum];
@@ -68,10 +72,9 @@ config.primary.coin.name = 'Litecoin';
 config.primary.coin.symbol = 'LTC';
 config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
+config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
-config.primary.coin.staking = false;
-config.primary.coin.rewards = '';
 config.primary.coin.version = 1;
 
 // Algorithm Configuration
@@ -97,7 +100,7 @@ config.primary.coin.mainnet.scriptHash = Buffer.from('32', 'hex').readUInt8(0);
 config.primary.coin.mainnet.wif = Buffer.from('b0', 'hex').readUInt8(0);
 config.primary.coin.mainnet.coin = 'ltc';
 
-// Mainnet Configuration
+// Testnet Configuration
 config.primary.coin.testnet = {};
 config.primary.coin.testnet.bech32 = 'tltc';
 config.primary.coin.testnet.bip32 = {};

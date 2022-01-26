@@ -1,10 +1,10 @@
 /*
  *
- * Example (Ravencoin)
+ * Example (Peercoin)
  *
  */
 
-// Ravencoin Configuration File
+// Peercoin Configuration File
 // https://blinkhash.com/docs/foundation/configurations
 // Consult the above link if you have any questions
 
@@ -14,8 +14,8 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-config.name = 'Pool-Ravencoin';
-config.coins = ['Ravencoin'];
+config.name = 'Pool-Peercoin';
+config.coins = ['Peercoin'];
 
 // Banning Configuration
 config.banning = {};
@@ -48,7 +48,7 @@ config.ports.push(ports1);
 config.p2p = {};
 config.p2p.enabled = false;
 config.p2p.host = '[host]';
-config.p2p.port = 8767;
+config.p2p.port = 9901;
 
 // Settings Configuration
 config.settings = {};
@@ -68,18 +68,18 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Ravencoin';
-config.primary.coin.symbol = 'RVN';
-config.primary.coin.asicboost = false;
+config.primary.coin.name = 'Peercoin';
+config.primary.coin.symbol = 'PPC';
+config.primary.coin.asicboost = true;
 config.primary.coin.getinfo = false;
-config.primary.coin.hybrid = false;
+config.primary.coin.hybrid = true;
 config.primary.coin.parameters = {};
-config.primary.coin.segwit = false;
-config.primary.coin.version = 1;
+config.primary.coin.segwit = true;
+config.primary.coin.version = 2;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
-config.primary.coin.algorithms.mining = 'kawpow';
+config.primary.coin.algorithms.mining = 'sha256d';
 config.primary.coin.algorithms.block = 'sha256d';
 config.primary.coin.algorithms.coinbase = 'sha256d';
 
@@ -90,34 +90,34 @@ config.primary.coin.rewards.addresses = [];
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
-config.primary.coin.mainnet.bech32 = '';
+config.primary.coin.mainnet.bech32 = 'pc';
 config.primary.coin.mainnet.bip32 = {};
 config.primary.coin.mainnet.bip32.public = Buffer.from('0488B21E', 'hex').readUInt32LE(0);
 config.primary.coin.mainnet.bip32.private = Buffer.from('0488ADE4', 'hex').readUInt32LE(0);
-config.primary.coin.mainnet.peerMagic = '5241564e';
-config.primary.coin.mainnet.pubKeyHash = Buffer.from('3c', 'hex').readUInt8(0);
-config.primary.coin.mainnet.scriptHash = Buffer.from('7a', 'hex').readUInt8(0);
-config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
-config.primary.coin.mainnet.coin = 'rvn';
+config.primary.coin.mainnet.peerMagic = 'e6e8e9e5';
+config.primary.coin.mainnet.pubKeyHash = Buffer.from('37', 'hex').readUInt8(0);
+config.primary.coin.mainnet.scriptHash = Buffer.from('75', 'hex').readUInt8(0);
+config.primary.coin.mainnet.wif = Buffer.from('B7', 'hex').readUInt8(0);
+config.primary.coin.mainnet.coin = 'ppc';
 
 // Testnet Configuration
 config.primary.coin.testnet = {};
-config.primary.coin.testnet.bech32 = '';
+config.primary.coin.testnet.bech32 = 'tpc';
 config.primary.coin.testnet.bip32 = {};
 config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
 config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
-config.primary.coin.testnet.peerMagic = '52564e54';
+config.primary.coin.testnet.peerMagic = 'cbf2c0ef';
 config.primary.coin.testnet.pubKeyHash = Buffer.from('6F', 'hex').readUInt8(0);
 config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
 config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
-config.primary.coin.testnet.coin = 'trvn';
+config.primary.coin.testnet.coin = 'ppc';
 
 // Daemon Configuration
 config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = 8766;
+daemons1.port = 9902;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -132,7 +132,7 @@ config.primary.payments.minPayment = 0.005;
 config.primary.payments.transactionFee = 0.0004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = 8766;
+config.primary.payments.daemon.port = 9902;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 
