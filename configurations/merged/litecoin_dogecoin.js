@@ -1,8 +1,12 @@
 /*
  *
- * Example (Litecoin/Dogecoin)
+ * Example (Litecoin + Dogecoin)
  *
  */
+
+// Litecoin + Dogecoin Configuration File
+// https://blinkhash.com/docs/foundation/configurations
+// Consult the above link if you have any questions
 
 // Main Configuration
 ////////////////////////////////////////////////////////////////////////////////
@@ -10,7 +14,8 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-config.name = 'Pool-LitecoinDogecoin';
+config.name = 'Pool-Litecoin-Dogecoin';
+config.coins = ['Litecoin', 'Dogecoin'];
 
 // Banning Configuration
 config.banning = {};
@@ -26,6 +31,7 @@ const ports1 = {};
 ports1.port = [port];
 ports1.enabled = true;
 ports1.type = [type];
+ports1.tls = false;
 ports1.difficulty = {};
 ports1.difficulty.initial = [initial];
 ports1.difficulty.minimum = [minimum];
