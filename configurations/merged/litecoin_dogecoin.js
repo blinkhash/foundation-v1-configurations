@@ -179,5 +179,14 @@ config.auxiliary.payments.daemon.port = 22555;
 config.auxiliary.payments.daemon.username = '[username]';
 config.auxiliary.payments.daemon.password = '[password]';
 
+// Recipients Configuration
+// Still a Work in Progress (2/10/2022)
+config.auxiliary.recipients = [];
+
+const auxRecipient1 = {};
+auxRecipient1.address = '[address]';
+auxRecipient1.percentage = [percentage] // 0 to 1;
+config.auxiliary.recipients.push(auxRecipient1);
+
 // Export Configuration
 module.exports = config;
