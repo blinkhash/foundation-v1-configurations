@@ -1,10 +1,10 @@
 /*
  *
- * Example (Firo)
+ * Example (Firocoin)
  *
  */
 
-// Firo Configuration File
+// Firocoin Configuration File
 // https://blinkhash.com/docs/foundation/configurations
 // Consult the above link if you have any questions
 
@@ -14,8 +14,8 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = true;
-config.name = 'Pool-Firo';
-config.coins = ['Firo'];
+config.name = 'Pool-Firocoin';
+config.coins = ['Firocoin'];
 
 // Banning Configuration
 config.banning = {};
@@ -73,7 +73,7 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Firo';
+config.primary.coin.name = 'Firocoin';
 config.primary.coin.symbol = 'FIRO';
 config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
@@ -92,6 +92,12 @@ config.primary.coin.algorithms.coinbase = 'sha256d';
 config.primary.coin.rewards = {};
 config.primary.coin.rewards.type = '';
 config.primary.coin.rewards.addresses = [];
+
+// Address Configuration
+const address1 = {};
+address1.address = "aFrAVZFr8pva5mG8XKaUH8EXcFVVNxLiuB";
+address1.amount = 187500000;
+config.primary.coin.rewards.addresses.push(address1);
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
