@@ -80,7 +80,7 @@ config.primary.coin.getinfo = false;
 config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
-config.primary.coin.version = 1;
+config.primary.coin.version = 3;
 
 // Algorithm Configuration
 config.primary.coin.algorithms = {};
@@ -90,7 +90,7 @@ config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Rewards Configuration
 config.primary.coin.rewards = {};
-config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.type = 'firocoin';
 config.primary.coin.rewards.addresses = [];
 
 // Address Configuration
