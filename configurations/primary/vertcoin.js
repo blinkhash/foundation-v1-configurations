@@ -1,3 +1,9 @@
+/*
+ *
+ * Example (Vertcoin)
+ *
+ */
+
 // Vertcoin Configuration File
 // https://blinkhash.com/docs/foundation/configurations
 // Consult the above link if you have any questions
@@ -8,13 +14,13 @@
 // Miscellaneous Configuration
 const config = {};
 config.enabled = false;
-config.name = 'vertcoin';
+config.name = 'Pool-Vertcoin';
 config.coins = ['Vertcoin'];
 
 // Banning Configuration
 config.banning = {};
 config.banning.time = 600;
-config.banning.invalidPercent = 25;
+config.banning.invalidPercent = 50;
 config.banning.checkThreshold = 500;
 config.banning.purgeInterval = 300;
 
@@ -43,17 +49,17 @@ config.p2p.port = 5889;
 
 // Statistics Configuration
 config.statistics = {};
-config.statistics.hashrateInterval = 60; // s;
+config.statistics.blocksInterval = 20; // s;
+config.statistics.hashrateInterval = 20; // s;
 config.statistics.historicalInterval = 1800; // s;
-config.statistics.refreshInterval = 60; // s;
-config.statistics.paymentsInterval = 60; // s;
+config.statistics.refreshInterval = 20; // s;
+config.statistics.paymentsInterval = 20; // s;
 config.statistics.hashrateWindow = 300; // s;
 config.statistics.historicalWindow = 86400; // s;
-config.statistics.paymentsWindow = 604800; // s;
 
 // Settings Configuration
 config.settings = {};
-config.settings.blockRefreshInterval = 500; // ms;
+config.settings.blockRefreshInterval = 1000; // ms;
 config.settings.connectionTimeout = 600; // s;
 config.settings.jobRebroadcastTimeout = 60; // s;
 config.settings.tcpProxyProtocol = false;
@@ -69,12 +75,11 @@ config.primary.address = '[address]';
 config.primary.coin = {};
 config.primary.coin.name = 'Vertcoin';
 config.primary.coin.symbol = 'VTC';
-config.primary.coin.asicboost = false;
-config.primary.coin.getinfo = false;
+config.primary.coin.asicBoost = false;
+config.primary.coin.getInfo = false;
+config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
-config.primary.coin.staking = false;
-config.primary.coin.rewards = '';
 config.primary.coin.version = 1;
 
 // Algorithm Configuration
@@ -100,12 +105,24 @@ config.primary.coin.mainnet.scriptHash = Buffer.from('05', 'hex').readUInt8(0);
 config.primary.coin.mainnet.wif = Buffer.from('80', 'hex').readUInt8(0);
 config.primary.coin.mainnet.coin = 'vtc';
 
+// Testnet Configuration
+config.primary.coin.testnet = {};
+config.primary.coin.testnet.bech32 = 'tvtc';
+config.primary.coin.testnet.bip32 = {};
+config.primary.coin.testnet.bip32.public = Buffer.from('043587CF', 'hex').readUInt32LE(0);
+config.primary.coin.testnet.bip32.private = Buffer.from('04358394', 'hex').readUInt32LE(0);
+config.primary.coin.testnet.peerMagic = '76657274';
+config.primary.coin.testnet.pubKeyHash = Buffer.from('4A', 'hex').readUInt8(0);
+config.primary.coin.testnet.scriptHash = Buffer.from('C4', 'hex').readUInt8(0);
+config.primary.coin.testnet.wif = Buffer.from('EF', 'hex').readUInt8(0);
+config.primary.coin.testnet.coin = 'tvtc';
+
 // Daemon Configuration
 config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '[host]';
-daemons1.port = [port];
+daemons1.port = 5888;
 daemons1.username = '[username]';
 daemons1.password = '[password]';
 config.primary.daemons.push(daemons1);
@@ -113,14 +130,14 @@ config.primary.daemons.push(daemons1);
 // Payment Configuration
 config.primary.payments = {};
 config.primary.payments.enabled = true;
-config.primary.payments.checkInterval = 20;
-config.primary.payments.paymentInterval = 7200;
+config.primary.payments.checkInterval = 20; // s;
+config.primary.payments.paymentInterval = 7200; // s;
 config.primary.payments.minConfirmations = 10;
 config.primary.payments.minPayment = 0.005;
-config.primary.payments.transactionFee = 0.0004;
+config.primary.payments.transactionFee = 0.004;
 config.primary.payments.daemon = {};
 config.primary.payments.daemon.host = '[host]';
-config.primary.payments.daemon.port = [port];
+config.primary.payments.daemon.port = 5888;
 config.primary.payments.daemon.username = '[username]';
 config.primary.payments.daemon.password = '[password]';
 
@@ -129,7 +146,7 @@ config.primary.recipients = [];
 
 const recipient1 = {};
 recipient1.address = '[address]';
-recipient1.percentage = 0.01 // 0 to 1;
+recipient1.percentage = [percentage] // 0 to 1;
 config.primary.recipients.push(recipient1);
 
 // Export Configuration

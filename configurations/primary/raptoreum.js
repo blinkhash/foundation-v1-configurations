@@ -1,6 +1,6 @@
 /*
  *
- * Example (Pools)
+ * Example (Raptoreum)
  *
  */
 
