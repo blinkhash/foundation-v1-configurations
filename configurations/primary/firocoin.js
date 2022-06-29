@@ -95,9 +95,16 @@ config.primary.coin.rewards.addresses = [];
 
 // Address Configuration
 const address1 = {};
-address1.address = "aFrAVZFr8pva5mG8XKaUH8EXcFVVNxLiuB";
-address1.amount = 187500000;
+//address1.address = "TWDxLLKsFp6qcV1LL4U2uNmW4HwMcapmMU";  // Uncomment for Testnet
+//address1.address = "aLgRaYSFk6iVw2FqY1oei8Tdn2aTsGPVmP";  // Uncomment for Mainnet
+address1.amount = 93750000;
 config.primary.coin.rewards.addresses.push(address1);
+
+const address2 = {};
+//address2.address = "TCkC4uoErEyCB4MK3d6ouyJELoXnuyqe9L";  // Uncomment for Testnet
+//address2.address = "aFA2TbqG9cnhhzX5Yny2pBJRK5EaEqLCH7";  // Uncomment for Mainnet
+address2.amount = 62500000;
+config.primary.coin.rewards.addresses.push(address2);
 
 // Mainnet Configuration
 config.primary.coin.mainnet = {};
