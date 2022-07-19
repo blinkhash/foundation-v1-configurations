@@ -40,6 +40,7 @@ ports1.difficulty.targetTime = 15;
 ports1.difficulty.retargetTime = 90;
 ports1.difficulty.variance = 0.3;
 config.ports.push(ports1);
+
 // P2P Configuration
 config.p2p = {};
 config.p2p.enabled = false;
