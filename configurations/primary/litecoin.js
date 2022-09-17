@@ -80,6 +80,7 @@ config.primary.coin.getinfo = false;
 config.primary.coin.hybrid = false;
 config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
+config.primary.coin.mweb = true;
 config.primary.coin.version = 1;
 
 // Algorithm Configuration

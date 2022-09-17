@@ -79,6 +79,7 @@ config.primary.coin.asicboost = false;
 config.primary.coin.getinfo = false;
 config.primary.coin.parameters = {};
 config.primary.coin.segwit = true;
+config.primary.coin.mweb = true;
 config.primary.coin.staking = false;
 config.primary.coin.rewards = '';
 config.primary.coin.version = 1;
