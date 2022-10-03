@@ -90,7 +90,7 @@ config.primary.coin.algorithms.coinbase = 'sha256d';
 
 // Rewards Configuration
 config.primary.coin.rewards = {};
-config.primary.coin.rewards.type = '';
+config.primary.coin.rewards.type = 'avian';
 config.primary.coin.rewards.addresses = [];
 
 // Mainnet Configuration
